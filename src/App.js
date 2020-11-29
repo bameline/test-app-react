@@ -1,17 +1,19 @@
-import Calculator from 'calculator-components/calculator-component';
-import { WelcomeDialog } from 'composition-components/welcome-dialo-component';
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Routing } from 'routing-component';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>This is the main component</div>
-        <WelcomeDialog/>
-        <Calculator />
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+        <Routing />
+        </header>
+        <body>
+        </body>
+      </div>
+    </BrowserRouter>
   );
 }
 
