@@ -1,5 +1,6 @@
 import Calculator from "calculator-components/calculator-component";
 import { WelcomeDialog } from "composition-components/welcome-dialo-component";
+import { FetchComponent } from "fetchapi-component/feth-component";
 import { NavigationBar } from "navbar-components/navbar-component";
 import { TestNotification } from "notification-component/test-notifications";
 import React from "react";
@@ -12,10 +13,10 @@ export class Routing extends React.Component{
     render(){
         return (
         <div>
-            <NavigationBar />
             <Route path="/welcome" component={WelcomeDialog}/>
             <Route path="/calculator" component={Calculator}/>
             <Route path="/testNotification" component={TestNotification}/>
+            <Route path="/fetchapi" component={FetchComponent}/>
         </div>
         );
     }

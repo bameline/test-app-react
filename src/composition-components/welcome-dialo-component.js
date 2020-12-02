@@ -9,9 +9,9 @@ export class WelcomeDialog extends React.Component {
         return (
             <Dialog
             title="Bienvenue"      
-            message="Merci de visiter notre vaisseau spatial !">
+            message="Merci de visiter notre cette appli de test">
             <div> this is the welcome dialog content :) </div>
-
+            <div>This dialog is inserted in a compostion component</div>
             </Dialog>
         );
     }

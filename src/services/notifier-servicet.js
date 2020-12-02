@@ -13,6 +13,7 @@ function displayWarningMessage(message){
 }
 
 export function displayMessage(message, type){
+    console.log("notif");
     switch(type){
         case "success":
             displaySuccessMessage(message);

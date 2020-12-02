@@ -19,6 +19,7 @@ export class NavigationBar extends React.Component{
             <NavLink  as={Link} to="/welcome">welcome</NavLink >
             <Nav.Link as={Link} to="/calculator">calculator</Nav.Link>
             <Nav.Link as={Link} to="/testNotification">testNotification</Nav.Link>
+            <Nav.Link as={Link} to="/fetchapi">fetchapi</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>

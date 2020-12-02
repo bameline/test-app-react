@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { Routing } from 'routing-component';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css'; 
+import { NavigationBar } from 'navbar-components/navbar-component';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <header className="App-header">
         </header>
         <div className="App-body">
+        <NavigationBar />
         <Routing />
         </div>
       </div>
