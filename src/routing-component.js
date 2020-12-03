@@ -5,6 +5,7 @@ import { NavigationBar } from "navbar-components/navbar-component";
 import { TestNotification } from "notification-component/test-notifications";
 import React from "react";
 import { Link, Route } from "react-router-dom";
+import Articles from "redux-components/articles-component";
 
 export class Routing extends React.Component{
     constructor(props) {
@@ -17,6 +18,7 @@ export class Routing extends React.Component{
             <Route path="/calculator" component={Calculator}/>
             <Route path="/testNotification" component={TestNotification}/>
             <Route path="/fetchapi" component={FetchComponent}/>
+            <Route path="/articles" component={Articles}/>
         </div>
         );
     }

@@ -1,4 +1,5 @@
 import React from "react";
+import { trackPromise } from "react-promise-tracker";
 import { fetchApi } from "services/api-service";
 import { displayMessage } from "services/notifier-servicet";
 import { TableContainer } from "./table-container-component";
@@ -21,27 +22,29 @@ export class FetchComponent extends React.Component{
     }
 
     fetchAPage(url){
-        fetchApi(url)
-        .then(res => res.json())
-        .then((data) => {
-            displayMessage("Success retrieving users", "success");
-            //this.setState({users : data.data})
-            this.setState(state => {
-                const users = state.users.concat( data.data );
-           
-                return {
-                  users
-                };
-              });
-            console.log('This is your data', data)
-            return data.data;
-            }
+        trackPromise(
+            fetchApi(url)
+            .then(res => res.json())
+            .then((data) => {
+                displayMessage("Success retrieving users", "success");
+                //this.setState({users : data.data})
+                this.setState(state => {
+                    const users = state.users.concat( data.data );
+            
+                    return {
+                    users
+                    };
+                });
+                console.log('This is your data', data)
+                return data.data;
+                }
+            )
+            .catch((error) => {
+                displayMessage("Error retrieving users", "error");
+                console.log(error)
+                return[];
+            })
         )
-        .catch((error) => {
-            displayMessage("Error retrieving users", "error");
-            console.log(error)
-            return[];
-          })
     }
 
     render(){

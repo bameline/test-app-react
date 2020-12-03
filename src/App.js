@@ -5,6 +5,7 @@ import { Routing } from 'routing-component';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css'; 
 import { NavigationBar } from 'navbar-components/navbar-component';
+import { LoadingIndicator } from 'loader-components/loader-indicator-component';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <header className="App-header">
         </header>
         <div className="App-body">
-        <NavigationBar />
-        <Routing />
+          <NavigationBar />
+          <LoadingIndicator />
+          <Routing />
         </div>
       </div>
     </BrowserRouter>
